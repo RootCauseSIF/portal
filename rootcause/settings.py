@@ -91,11 +91,11 @@ FORMS_BUILDER_EXTRA_WIDGETS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'b85fa5a2cffc6b',
-        'PASSWORD': '94517e1e',
-        'HOST': 'us-cdbr-east-05.cleardb.net',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '',
-        'NAME': 'heroku_bdd1a750b8f25eb',
+        'NAME': 'rootcause',
     }
 }
 

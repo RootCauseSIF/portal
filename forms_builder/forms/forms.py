@@ -194,10 +194,15 @@ class FormForForm(forms.ModelForm):
                     self.fields[field_key].widget.attrs["required"] = ""
             if field.fieldset:
                 self.fields[field_key].widget.attrs["data-fieldset"] = field.fieldset
+            # if field.row:
+            #     self.fields[field_key].widget.attrs["data-row"] = field.row
             self.fields[field_key].widget.attrs["class"] = css_class
             if field.placeholder_text and not field.default:
                 text = field.placeholder_text
                 self.fields[field_key].widget.attrs["placeholder"] = text
+            if "dimensions" in field_args:
+                print "here!!"
+                self.fields[field_key].widget.attrs["dimensions"] = field_args["dimensions"]
 
     def save(self, **kwargs):
         """

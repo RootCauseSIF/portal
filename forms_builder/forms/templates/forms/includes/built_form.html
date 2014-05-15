@@ -62,6 +62,8 @@
             $(".alert").alert();
             $("form li").addClass("form-group");
             $("select").addClass("form-control");
+            $("form").attr("role","form")
+            $("form p").addClass("form-group");
 
             groupFieldSets();
         });
@@ -71,7 +73,7 @@
     {% if form.intro %}
         <p>{{ form.intro }}</p>
     {% endif %}
-    <form id="awesome" action="{{ form.get_absolute_url }}" method="post"
+    <form id="awesome" action="{{ form.get_absolute_url }}" method="post" role="form"
           {% if form_for_form.is_multipart %}enctype="multipart/form-data"{% endif %}>
         {% csrf_token %}
         {{ form_for_form.as_p }}

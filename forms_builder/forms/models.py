@@ -164,6 +164,7 @@ class AbstractField(models.Model):
     matrix_cols = models.IntegerField(_("Matrix Cols"), null=True, blank=True)
     fieldset = models.CharField(_("Fieldset"), null=True,
         blank=True, max_length=100)
+    # row = models.CharField(_("Row"), null=True, blank=True, max_length=100)
     help_text = models.CharField(_("Help text"), blank=True, max_length=settings.HELPTEXT_MAX_LENGTH)
 
     objects = FieldManager()
